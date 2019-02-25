@@ -11,7 +11,7 @@ import * as jsonwebtoken from 'jsonwebtoken';
 import { AccessToken } from '../entities/accessToken.entity';
 import { JwtPayload } from '../interfaces/jwt-payload.interface';
 import { UserService } from '../../user';
-import { env } from '../../../utils/env';
+import { env } from '../../common';
 
 @Injectable()
 export class AuthService {

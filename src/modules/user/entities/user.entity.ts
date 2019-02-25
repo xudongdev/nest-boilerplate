@@ -8,8 +8,8 @@ import {
   ManyToMany,
   JoinTable,
 } from 'typeorm';
-import { Permission } from '../../permission/entities/permission.entity';
-import { Role } from '../../permission/entities/role.entity';
+import { Permission } from './permission.entity';
+import { Role } from './role.entity';
 
 @Entity()
 export class User extends BaseEntity {

@@ -19,10 +19,10 @@ import { CreateUserDto } from '../dto/create-user.dto';
 import { UpdateUserDto } from '../dto/update-user.dto';
 
 import { AuthGuard } from '../../auth/guards/auth.guard';
-import { RolesGuard } from '../../permission/guards/roles.guard';
+import { RolesGuard } from '../guards/roles.guard';
 
-import { Roles } from '../../permission/decorators/roles.decorator';
-import { CurrentUser } from '../../auth/decorators/current-user.decorator';
+import { Roles } from '../decorators/roles.decorator';
+import { CurrentUser } from '../decorators/current-user.decorator';
 
 @Controller('users')
 @Roles('admin')

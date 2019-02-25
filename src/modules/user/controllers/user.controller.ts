@@ -10,7 +10,7 @@ import { RegisterDto } from '../dto/register.dto';
 import { UserService } from '../services/user.service';
 import { User } from '../entities/user.entity';
 import { AuthGuard } from '../../auth/guards/auth.guard';
-import { CurrentUser } from '../../auth/decorators/current-user.decorator';
+import { CurrentUser } from '../decorators/current-user.decorator';
 
 @Controller('user')
 export class UserController {

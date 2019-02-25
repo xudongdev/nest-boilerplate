@@ -5,7 +5,7 @@ import {
   IsEmail,
   IsBoolean,
 } from 'class-validator';
-import { Role } from '../../permission/entities/role.entity';
+import { Role } from '../entities/role.entity';
 
 export class CreateUserDto {
   @Length(1, 20)

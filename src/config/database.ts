@@ -1,4 +1,7 @@
-import { env } from '../utils/env';
+import { env } from '../modules/common/utils/env';
+
+import { AccessToken } from '../modules/auth';
+import { Role, Permission, User } from '../modules/user';
 
 export default {
   type: env('DB_TYPE', 'mysql'),
@@ -8,7 +11,7 @@ export default {
   password: env('DB_PASSWORD', ''),
   database: env('DB_DATABASE', 'default'),
   timezone: 'Z',
-  entities: ['src/**/**.entity{.ts,.js}'],
+  entities: [AccessToken, Permission, Role, User],
   migrations: ['src/migrations/**/*{.ts,.js}'],
   cli: {
     migrationsDir: 'src/migrations',

@@ -9,7 +9,7 @@ import {
   JoinTable,
 } from 'typeorm';
 import { Permission } from './permission.entity';
-import { User } from '../../user';
+import { User } from './user.entity';
 
 @Entity()
 export class Role extends BaseEntity {

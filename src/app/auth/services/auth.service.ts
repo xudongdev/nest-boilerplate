@@ -8,10 +8,10 @@ import { Repository } from 'typeorm';
 import * as uuid from 'uuid';
 import * as bcrypt from 'bcryptjs';
 import * as jsonwebtoken from 'jsonwebtoken';
-import { AccessToken } from './entities/accessToken.entity';
-import { JwtPayload } from './interfaces/jwt-payload.interface';
-import { UserService } from '../user/user.service';
-import { env } from '../../utils/env';
+import { AccessToken } from '../entities/accessToken.entity';
+import { JwtPayload } from '../interfaces/jwt-payload.interface';
+import { UserService } from '../../user';
+import { env } from '../../../utils/env';
 
 @Injectable()
 export class AuthService {

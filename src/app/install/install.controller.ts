@@ -2,10 +2,8 @@ import { Controller, Get } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 
-import { Permission } from '../permission/entities/permission.entity';
-import { Role } from '../permission/entities/role.entity';
-import { User } from '../user/user.entity';
-import { UserService } from '../user/user.service';
+import { Permission, Role } from '../permission';
+import { User, UserService } from '../user';
 
 @Controller('install')
 export class InstallController {

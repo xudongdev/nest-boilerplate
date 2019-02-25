@@ -12,13 +12,13 @@ import {
   UseGuards,
 } from '@nestjs/common';
 
-import { User } from '../user.entity';
-import { UserService } from '../user.service';
+import { User } from '../entities/user.entity';
+import { UserService } from '../services/user.service';
 
 import { CreateUserDto } from '../dto/create-user.dto';
 import { UpdateUserDto } from '../dto/update-user.dto';
 
-import { AuthGuard } from '../../auth/auth.guard';
+import { AuthGuard } from '../../auth/guards/auth.guard';
 import { RolesGuard } from '../../permission/guards/roles.guard';
 
 import { Roles } from '../../permission/decorators/roles.decorator';

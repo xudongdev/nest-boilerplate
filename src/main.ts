@@ -6,17 +6,24 @@ dotenv.config();
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 
+import { AppModule } from './app';
 import { AuthModule } from './modules/auth';
 import { InstallModule } from './modules/install';
 import { UserModule } from './modules/user';
 
 @Module({
-  imports: [TypeOrmModule.forRoot(), InstallModule, UserModule, AuthModule],
+  imports: [
+    TypeOrmModule.forRoot(),
+    AppModule,
+    AuthModule,
+    InstallModule,
+    UserModule,
+  ],
 })
-class AppModule {}
+class RootModule {}
 
 (async () => {
-  const app = await NestFactory.create(AppModule);
+  const app = await NestFactory.create(RootModule);
 
   app.setGlobalPrefix('api');
   app.enableCors();
